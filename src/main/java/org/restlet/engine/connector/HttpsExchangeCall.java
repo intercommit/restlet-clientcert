@@ -12,8 +12,8 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpsExchange;
 
 /**
- * The default {@link HttpsExchangeCall} fails to extract certificates from the SSL connection.
- * This class implemenets {@link #getCertificates()} to extract certificates.
+ * The default {@link HttpExchangeCall} fails to extract certificates from the SSL connection.
+ * This class implements {@link #getCertificates()} to extract certificates.
  */
 @SuppressWarnings("restriction")
 public class HttpsExchangeCall extends HttpExchangeCall {
