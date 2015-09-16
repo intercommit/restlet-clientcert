@@ -1,0 +1,1 @@
+java -Dapp.name=restlet-server -Dapp.maven.test -jar ..\dependency\appboot.jar app.main.class=com.descartes.restlet.clientcert.RestletServerMain app.boot.debug %*
