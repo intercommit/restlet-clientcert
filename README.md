@@ -5,8 +5,8 @@ This project contains example code showing how one `pfx` certificate file can be
 to create HTTPS connections with the client sending a certificate to the server.
 
 In this case the `pfx` file contains a CA root-certificate and a related client certificate.
-The methods in the class `SslUtils` provide tools to de-construct the certificate file
-and reconstruct KeysStores and TrustStores which can be used by both servers and clients.
+The methods in the class `SslUtils` (listed [here](tree/master/src/main/java/com/descartes/restlet/clientcert) 
+provide tools to de-construct the certificate file and reconstruct KeysStores and TrustStores which can be used by both servers and clients.
 
 The configuration for the client using `SslUtils` is shown in `ClientSslContextFactory`.  
 The configuration for the server using `SslUtils` is shown in `ServerSslContextFactory`.
