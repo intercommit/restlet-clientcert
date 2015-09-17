@@ -36,7 +36,7 @@ public class ServerSslContextFactory extends DefaultSslContextFactory {
 		Path certFilePath = Paths.get(Thread.currentThread().getContextClassLoader().getResource(certFileName).toURI());
 		KeyManagerFactory kmf = SslUtils.loadKeyStore(certFilePath, certFilePwd);
 		KeyManager[] kms = kmf.getKeyManagers();
-		List<X509Certificate> certs = SslUtils.getClientCaCerts(kmf.getKeyManagers());
+		List<X509Certificate> certs = SslUtils.getClientCaCerts(kms);
 		TrustManagerFactory tmf = SslUtils.createTrustStore(Constants.CERT_CA_ALIAS, certs.get(0));
 		TrustManager[] tms = tmf.getTrustManagers();
 		

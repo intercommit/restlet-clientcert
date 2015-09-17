@@ -32,8 +32,8 @@ public class ClientSslContextFactory extends SslContextFactory {
 		KeyManagerFactory kmf = SslUtils.loadKeyStore(certFilePath, certFilePwd);
 		kms = kmf.getKeyManagers();
 		/*
-		List<X509Certificate> certs = SslUtils.getClientCaCerts(kmf.getKeyManagers());
-		TrustManagerFactory tmf = SslUtils.createTrustStore("caicit", certs.get(0));
+		List<X509Certificate> certs = SslUtils.getClientCaCerts(kms);
+		TrustManagerFactory tmf = SslUtils.createTrustStore(Constants.CERT_CA_ALIAS, certs.get(0));
 		tms = tmf.getTrustManagers();
 		*/
 		tms = new TrustManager[1];
